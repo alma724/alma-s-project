@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: Varela Round;
+	font-size: 15px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    /* overflow: hidden; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    align-items: center;
+    transition: transform 0.5s ease-out;
+    border-bottom: 1px solid #FF9966;
+    z-index: 1000;
+}
+
+.logo {
+    height: 75px;
+    width: 75px;
+    /* right:0; */
+}
+
+.Home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); 
+    pointer-events: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    margin-left: auto;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0 30px;
+    padding: 6px 15px;
+    transition: .5s;
+}
+
+.Home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    height: 100vh;
+    background: url('tlv.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.fa-circle-user {
+    font-size: 24px;
+    margin-right: 0px;
+    color: #000;
+}
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)); 
+    pointer-events: none; 
+    z-index: 100;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  .search-container input {
+    padding: 6px;
+    margin-right: 5px;
+    text-align: right;
+    border: 1px solid #ccc;
+  }
+
+  .search-container button {
+    padding: 6px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.Home h2 {
+    font-size: 1.8em;
+    color: #fff;
+    margin: 0;
+}
+.centered-text {
+    text-align: center;
+    z-index: 101;
+}
+.user-link {
+    margin-right: 25px ;
+}
+.First {
+    position: relative;
+    height: 100vh;
+    align-items: center;
+}
+

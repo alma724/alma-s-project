@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he-IL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "witdh=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Page Title</title>
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <div class="logo1">
+            <a href="project.html"><img src="logo1.png" class="logo"></a>
+        </div>
+    </div>
+
+    <nav class="navigation">
+        <a href="טבע.html" class="">מסלולים וטבע<span></span></a>
+        <a href="מסעדות.html" class="">מסעדות<span></span></a>
+        <a href="שווקים.html" class="">שווקים<span></span></a>
+        <a href="היסטוריה.html" class="">אתרים היסטוריים<span></span></a>
+    </nav>
+
+    <div class="search-container">
+        <form onsubmit="performSearch(query)">
+        <input type="text" id="searchInput" placeholder="Search...">   
+        <button type="submit"><i class="fa-solid fa-search"></i></button>
+        </form>
+    </div>
+    <a href="login.html" class="user-link"><i class="fa-solid fa-circle-user"></i><span></span></a>
+    <div id="popup" class="popup">
+        <p><a href="login.html">התחברות</a></p>
+        <hr>
+        <p><a id="logout">התנתקות</a></p>
+    </div>
+    <a href="מועדפים.html" class="heart1">❤</a>
+</header>
+
+<section id="1" class="First">
+<div class="additional_description">
+<h2>אתרים היסטוריים</h2>
+
+<div class="title-bar">
+    <h3 class="title-text">בית בן גוריון</h3>
+    <a class="heart" id="ben" onclick="saveFavorite('ben')">❤</a>
+</div>
+
+
+<h1>
+    
+    בית בן גוריון הוא הזדמנות נדירה ללמוד על מורשת ישראל מקרוב. הביקור בבית של מי שהיה ראש הממשלה ושר הביטחון הראשון של המדינה, מעלה שאלות ומספק תשובות לגבי הזוג בן גוריון שהבית הזה שימש כמעונם הפרטי. צוואתו של בן גוריון הייתה שאותו בית יהפוך ל-‘מוסד לקריאה, לעיון ולמחקר’ ואכן כיום, משמש הבית כמוזיאון היסטורי שאסור לפספס.
+    
+    <br>איפה: שדרות בן גוריון 17, תל אביב.<br>
+
+    מתי: ימים א'-ה': 9:00-16:00, שישי: 9:00-13:00, יום שבת: 10:00-14:00.<br>
+    מחיר: הכניסה ללא תשלום.
+</h1>
+
+
+<img src="גוריון.jpg" alt="" class="image1">
+
+<div class="title-bar">
+    <h3 class="title-text">מוזיאון ארץ ישראל </h3>
+    <a class="heart" id="israel" onclick="saveFavorite('israel')">❤</a>
+</div>
+
+<h1>
+    
+    אחד משלושת המוזיאונים הגדולים בארץ ישמח לארח אתכם לחוויה מרתקת. המוזיאון הרב תחומי שעוסק בקשר בין החומר לרוח ודרכו מספר את סיפור ארץ ישראל, ומשמיע את מגוון הקולות המיוחדים בארץ בצורה שעוד לא שמעתם.
+    
+    <br>איפה: חיים לבנון 2, רמת אביב, תל אביב.<br>
+
+    מתי: ראשון סגור. ב’ ו-ד’ – 10:00 עד 16:00, ג’ ו-ה’ – 10:00 עד 20:00, שישי עד 14:00 ושבת עד 18:00.<br>
+    מחיר: מבוגר מעל גיל 18 – 52 ש”ח, תושבים – 42  ש”ח, סטודנטים – 35 ש”ח, ילדים מתחת לגיל 18, אנשים עם מוגבלויות ומלוויהם נכנסים ללא תשלום.
+    
+</h1>
+
+
+<img src="מוזיאון.jpg" alt="" class="image1">
+</div>
+
+
+</section>
+
+<style>
+.additional_description{
+    display: flex;
+    flex-direction: column;
+    /* top: 50%; */
+}
+
+h2 {
+    padding-right: 20px;
+    /* position: absolute; */
+    font-size: 50px !important;
+    width: 500px;
+    margin-top: 100px !important;
+    /* top: 25%; */
+    /* left: 55%; */
+    /* transform: translate(-50%, -50%); */
+    z-index: 1;
+}
+
+.additional_description h2:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 9px;
+    height: 53px;
+    background: linear-gradient(180deg, #FF9966 0%, #e47137 97.53%);
+    border-radius: 4px;
+}
+
+.additional_description .title-text {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* width: 900px; */
+    height: 3rem;
+    /* position: absolute; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 35px;
+    text-align: right;
+    color: #f6f9ff;
+    background: #FF9933;
+    box-sizing: border-box;
+    padding: 5.5px 12px;
+    margin-bottom: 20px;
+    /* margin-right: 5.5rem; */
+}
+
+.title-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.heart {
+    z-index: 99;
+    font-size: 2rem;
+    color: #f6f9ff;
+}
+
+.heart1 {
+  font-size: 2rem;
+  color: #f84c2e;
+  margin-right: 30px;
+  text-decoration: none;
+  
+}
+.heart1:hover {
+    color: #ff745b !important;
+}
+
+.heart:hover {
+    cursor: pointer;
+    color: #ff745b;
+    /* color: rgba(#FF5233, 0.3); */
+}
+.heart.active{
+    color: #f32e0b;
+}
+
+
+.additional_description img{
+    height: 500px;
+    width: 900px;
+}
+.image1{
+    /* position: absolute; */
+    /* bottom: -50%; */
+    /* left: 28%; */
+    /* transform: translate(-50%, -50%); */
+}
+.additional_description h1 {
+    font-size: 18px !important;
+    width: 900px !important;
+    font-weight: 100;
+    line-height: 35px !important;
+}
+
+.additional_description >h1, h2,.image1, h3 {
+    position: relative;
+    /* background-color: #b03333; */
+    width: 900px;
+    margin: 20px;
+    /* text-align: center; */
+    line-height: 50px;
+    font-size: 30px;
+    left:-5%;
+}
+.swal2-confirm:focus {
+    outline: 3px solid #e4989d;
+}
+.user-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+}
+.user-link i {
+    /* margin-right: 5px; */
+    color: #333;
+
+}
+.popup {
+position: absolute;
+display: none;
+background-color: #fff;
+border: 1px solid #ccc;
+padding: 20px 30px;
+z-index: 1000;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+top: calc(100% - 10px);
+left: 150px;
+
+}
+.popup.show {
+    display: block;
+}
+.popup p {
+    margin: 20px -10px;
+}
+.popup hr {
+    border: none;
+    border-top: 1px solid #FF9966;
+    margin: 5px 0;
+}
+.popup a {
+    text-decoration: none;
+    color: #333;
+}
+#logout {
+    cursor: pointer;
+}
+</style>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</html>
